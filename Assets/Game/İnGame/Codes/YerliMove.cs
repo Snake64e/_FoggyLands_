@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class YerliCode : MonoBehaviour
+public class YerliMove : MonoBehaviour
 {
     private float speed = 2f;
 
@@ -14,37 +14,40 @@ public class YerliCode : MonoBehaviour
 
     void Start()
     {
-        // HATA 1: Olmayan "YönBelirle" yerine mantığı yazdığın "kovala" fonksiyonu çağrıldı
+
         InvokeRepeating("kovala", 0f, 2f);
     }
 
-    void Update()
+void Update()
+{
+  
+
+
+    float mesafe = Vector2.Distance(transform.position, hedef.position);
+    
+    if (mesafe <= 4f && !(YerliHappy.Happiness))
     {
-        float mesafe = Vector2.Distance(transform.position, hedef.position);
-        
-        if (mesafe <= 4f)
-        {
-            kovaliyor = true;
-            // HATA 2: Mesafe yakınken rastgele yön seçen kovala() yerine, hedefi takip eden fonksiyon çağrıldı
-            KovalamaYonuBelirle();
-        }
-        else
-        {
-            kovaliyor = false;
-        }
+        kovaliyor = true;
+        KovalamaYonuBelirle();
     }
+    else
+    {
+        kovaliyor = false;
+    }
+}
 
     void FixedUpdate()
     {
-        // HATA 4: Eğer kovalıyorsa kovalamaHizi, kovalamıyorsa normal speed kullanması sağlandı
+
         float mevcutHiz = kovaliyor ? kovalamaHizi : speed;
         rb.linearVelocity = moveInput * mevcutHiz;
     }
 
     void kovala()
     {
-        // HATA 3: !kovaliyor kontrolü artık doğru çalışıyor (Kovalıyorsa rastgele yön seçmeyecek)
-        if (!(kovaliyor))
+
+
+        if (!(kovaliyor) )
         {
             float moveX = 0;
             float moveY = 0;
