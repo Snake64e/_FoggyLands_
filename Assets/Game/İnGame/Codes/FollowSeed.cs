@@ -4,9 +4,13 @@ public class FollowSeed : MonoBehaviour
 {
     public static int toplanan_tohum = 0;
     public Transform hedef;       
-     private float hiz = 5f;       
-    private float menzil = 3f; 
+    private float hiz = 5f;       
+    private float menzil = 3f;
 
+    void Start()
+    {
+        toplanan_tohum = 0;
+    }
     void Update()
     {
         if (hedef == null) return;
