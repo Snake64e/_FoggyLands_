@@ -1,11 +1,18 @@
 using UnityEngine;
 
-public class FollowSystem : MonoBehaviour
+public class FollowTrash : MonoBehaviour
 {
     public static int toplanan_cop = 0;
     public Transform hedef;       
      private float hiz = 5f;       
-    private float menzil = 3f; 
+    private float menzil = 3f;
+
+
+    void Start()
+    {
+        toplanan_cop = 0;
+    }
+
 
     void Update()
     {

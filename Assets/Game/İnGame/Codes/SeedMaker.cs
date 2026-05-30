@@ -18,12 +18,12 @@ public class SeedMaker : MonoBehaviour
     {
         var keyboard = Keyboard.current;
 
-        if (keyboard.zKey.isPressed)
+        if (keyboard.fKey.isPressed)
         {
 
-            if (FollowSeed.toplanan_tohum > 0 && FollowTrash.toplanan_cop > 1)
+            if (FollowSeed.toplanan_tohum >= 1 && FollowTrash.toplanan_cop >= 2)
             {
-                while (FollowTrash.toplanan_cop > 2 && FollowSeed.toplanan_tohum > 1)
+                while (FollowTrash.toplanan_cop >= 2 && FollowSeed.toplanan_tohum >= 1)
                 {
                 Fidan ++;
                 FollowSeed.toplanan_tohum -= 1;
