@@ -18,7 +18,7 @@ public class SeedMaker : MonoBehaviour
     {
         var keyboard = Keyboard.current;
 
-        if (keyboard.fKey.isPressed)
+        if (keyboard.qKey.isPressed)
         {
 
             if (FollowSeed.toplanan_tohum >= 1 && FollowTrash.toplanan_cop >= 2)

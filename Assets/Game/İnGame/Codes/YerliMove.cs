@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // Çöp çalmak için
 
 public class YerliMove : MonoBehaviour
 {
@@ -12,41 +13,41 @@ public class YerliMove : MonoBehaviour
 
     private bool kovaliyor = false;
 
+
+    private float mesafe; 
+
     void Start()
     {
-
         InvokeRepeating("kovala", 0f, 2f);
+
+        // DEĞİŞİKLİK 2: Coroutine'i burada başlattık.
+        StartCoroutine(CopAzalt()); 
     }
 
-void Update()
-{
+    void Update()
+    {
   
-
-
-    float mesafe = Vector2.Distance(transform.position, hedef.position);
-    
-    if (mesafe <= 4f && !(YerliHappy.Happiness))
-    {
-        kovaliyor = true;
-        KovalamaYonuBelirle();
+        mesafe = Vector2.Distance(transform.position, hedef.position);
+        
+        if (mesafe <= 4f && !(YerliHappy.Happiness))
+        {
+            kovaliyor = true;
+            KovalamaYonuBelirle();
+        }
+        else
+        {
+            kovaliyor = false;
+        }
     }
-    else
-    {
-        kovaliyor = false;
-    }
-}
 
     void FixedUpdate()
     {
-
         float mevcutHiz = kovaliyor ? kovalamaHizi : speed;
         rb.linearVelocity = moveInput * mevcutHiz;
     }
 
     void kovala()
     {
-
-
         if (!(kovaliyor) )
         {
             float moveX = 0;
@@ -74,7 +75,6 @@ void Update()
             }
 
             moveInput = new Vector2(moveX, moveY).normalized;
-            
         }
     }
 
@@ -95,5 +95,19 @@ void Update()
 
         if (moveInput.x < 0) Flip(true);
         else if (moveInput.x > 0) Flip(false);
+    }
+
+
+    private IEnumerator CopAzalt()
+    {
+        while (true) 
+        {
+            if (mesafe <= 1f && FollowTrash.toplanan_cop > 0)
+            {
+                FollowTrash.toplanan_cop -= 1;
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
