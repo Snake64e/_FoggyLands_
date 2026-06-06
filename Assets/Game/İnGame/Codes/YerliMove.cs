@@ -55,22 +55,33 @@ void Update()
             string[] yöns = { "W", "A", "S", "D", "Dur" }; 
             string seçilenYön = yöns[Random.Range(0, yöns.Length)];
 
-            if (seçilenYön == "W") moveY = 1;
-            if (seçilenYön == "S") moveY = -1;
+            if (seçilenYön == "W")
+            {
+                moveY = 1;
+                this.GetComponent<Animator>().SetBool("isRunning", true);
+            }
+            if (seçilenYön == "S")
+            {
+                moveY = -1;
+                this.GetComponent<Animator>().SetBool("isRunning", true);
+            }
             if (seçilenYön == "A") 
             {
                 moveX = -1;
-                Flip(true); 
+                Flip(true);
+                this.GetComponent<Animator>().SetBool("isRunning", true);
             }
             if (seçilenYön == "D") 
             {
                 moveX = 1;
                 Flip(false);
+                this.GetComponent<Animator>().SetBool("isRunning", true);
             }
             if (seçilenYön == "Dur")
             {
                 moveX = 0;
                 moveY = 0;
+                this.GetComponent<Animator>().SetBool("isRunning", false);
             }
 
             moveInput = new Vector2(moveX, moveY).normalized;

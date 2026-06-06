@@ -546583,7 +546583,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 79.59198, y: 45.765335, z: 75.61267, w: 41.785812}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -553926,7 +553926,7 @@ Transform:
   m_GameObject: {fileID: 1226753097}
   serializedVersion: 2
   m_LocalRotation: {x: 8.906049e-10, y: -0.0000000073947577, z: -6.5858077e-18, w: 1}
-  m_LocalPosition: {x: -4.5145, y: 2.9225, z: 10}
+  m_LocalPosition: {x: -4.19, y: 2.46, z: 10}
   m_LocalScale: {x: 4.9273415, y: 2.227054, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560024,6 +560024,7 @@ GameObject:
   - component: {fileID: 1691249983}
   - component: {fileID: 1691249988}
   - component: {fileID: 1691249989}
+  - component: {fileID: 1691249990}
   m_Layer: 0
   m_Name: 'Yerli '
   m_TagString: Untagged
@@ -560069,7 +560070,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 17.83, y: 45.552082}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -560153,7 +560154,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 607210605859603313, guid: 4d5879fe617aac64c9d67ec5abb145e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -560172,8 +560173,8 @@ Transform:
   m_GameObject: {fileID: 1691249982}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.9, y: 8.99, z: 0}
-  m_LocalScale: {x: 0.8287279, y: 1.7813525, z: 1}
+  m_LocalPosition: {x: -35.64, y: 13.32, z: 0}
+  m_LocalScale: {x: 0.06, y: 0.06, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 979843528}
@@ -560206,6 +560207,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YerliHappy
   hedef: {fileID: 1371776074}
+--- !u!95 &1691249990
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691249982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c1d27f65ea480d4496f353efed561c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1712241408
 GameObject:
   m_ObjectHideFlags: 0
@@ -602529,7 +602552,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 77.60211, y: 47.755127, z: 75.61334, w: 45.76541}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -603914,7 +603937,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 77.60217, y: 43.77559, z: 75.61267, w: 45.765457}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
