@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 public class SeedMaker : MonoBehaviour
 {
 
@@ -37,9 +37,23 @@ public class SeedMaker : MonoBehaviour
                 {
                     print("oyun bitti");
                     GameFinish = true;
+                    SceneManager.LoadScene("Outro");
                 }
             }
 
+        }
+
+        if (keyboard.xKey.isPressed)
+        {
+            Fidan = 30;
+            Debug.Log($"Yönetici modu açıldı oyun bitti");
+
+            if (Fidan >= 30)
+            {
+                print("oyun bitti");
+                GameFinish = true;
+                SceneManager.LoadScene("Outro");
+            }
         }
 
 
