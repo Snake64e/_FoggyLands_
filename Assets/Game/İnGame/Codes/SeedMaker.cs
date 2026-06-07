@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SeedMaker : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class SeedMaker : MonoBehaviour
                 {
                     print("oyun bitti");
                     GameFinish = true;
+                    SceneManager.LoadScene("outro");
+
                 }
             }
 
