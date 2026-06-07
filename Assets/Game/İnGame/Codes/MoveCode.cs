@@ -9,6 +9,8 @@ public class MoveCode : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 moveInput;
 
+
+
     void Update()
     {
         float moveX = 0;
@@ -66,6 +68,16 @@ public class MoveCode : MonoBehaviour
         }
 
         moveInput = new Vector2(moveX, moveY).normalized;
+
+        if (keyboard.rKey.isPressed)
+        {
+            dash(10);
+        }
+
+        if (speed > 5)
+        {
+            speed = speed - 1;
+        }
     }
 
   
@@ -84,5 +96,15 @@ public class MoveCode : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = moveInput * speed;
+    }
+
+    void dash(int dashpower)
+    {
+        if (speed == 5)
+        {
+            speed = dashpower;
+        }
+
+
     }
 }
