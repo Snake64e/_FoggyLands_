@@ -3,6 +3,18 @@ using UnityEngine.InputSystem;
 
 public class MoveCode : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindFirstObjectByType<AudioManager>();
+
+        if (audioManager == null)
+        {
+            Debug.LogError("Sahnede AudioManager scriptine sahip bir obje bulunamadı! Lütfen kontrol et.");
+        }
+    }
+
     public float speed = 5f;
 
     public static bool GunMode = false;
@@ -20,12 +32,14 @@ public class MoveCode : MonoBehaviour
         {
             moveY = 1;
             this.GetComponent<Animator>().SetBool("isRunning", true);
+            audioManager.PlaySFX(audioManager.footsteps);
         }
 
         if (keyboard.sKey.isPressed)
         {
             moveY = -1;
             this.GetComponent<Animator>().SetBool("isRunning", true);
+            audioManager.PlaySFX(audioManager.footsteps);
         }
 
         if (keyboard.aKey.isPressed) 
@@ -33,6 +47,7 @@ public class MoveCode : MonoBehaviour
             moveX = -1;
             Flip(true);
             this.GetComponent<Animator>().SetBool("isRunning", true);
+            audioManager.PlaySFX(audioManager.footsteps);
         }
 
         if (keyboard.dKey.isPressed) 
@@ -40,6 +55,7 @@ public class MoveCode : MonoBehaviour
             moveX = 1;
             Flip(false);
             this.GetComponent<Animator>().SetBool("isRunning", true);
+            audioManager.PlaySFX(audioManager.footsteps);
         }
 
         if (keyboard.eKey.wasPressedThisFrame)
