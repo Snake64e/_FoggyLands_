@@ -17,7 +17,7 @@ public class TxtCode : MonoBehaviour
     void SkoruGuncelle()
     {
         // 2. DÜZELTME: Artık skorYazisi yukarıda tanımlandığı için hata vermeden çalışacaktır.
-        toplanancop.text = "Collected Trash: " + FollowTrash.toplanan_cop.ToString();
+        toplanancop.text = "Trash: " + FollowTrash.toplanan_cop.ToString();
         toplanantohum.text = "\nSeed: " + FollowSeed.toplanan_tohum.ToString();
         fidan.text = "\n\nSapling: " + SeedMaker.Fidan.ToString();
     }
